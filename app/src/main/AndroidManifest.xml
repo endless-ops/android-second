@@ -45,7 +45,24 @@
         <activity android:name=".activity.SharedElementActivity"/>
         <activity android:name=".activity.AcceptActivity"/>
         <activity android:name=".activity.AcceptChuanZhiHuiChuanZhiActivity"
-            android:windowSoftInputMode="adjustNothing"/>
+            android:windowSoftInputMode="adjustNothing"
+            android:launchMode="standard"/>
+
+        <!--
+            task是一个具有栈结构的对象，一个task可以管理多个Activity，启动一个应用，也就创建一个与之对应的task
+
+            解决任务栈的缺点，引入了启动模式 android:launchMode=""
+                四种启动模式
+                    standard  系统默认的启动模式，即标准模式
+                    singleTop 栈顶复用模式
+                    singleTask 栈内复用模式
+                        两点注意：
+                            如果是其他App以singleTask模式启动Activity1 ，将会创建一个新的任务栈
+                            如果以singleTask模式启动的Activity1 已经在后台的一个任务栈中，那么启动后，后台的任务栈一起切换到前台
+                    singleInstance 全局唯一模式（这个模式下的Activity会单独占用一个栈，这个栈在整个系统中是唯一的，
+                            不同的app去打开singleInstance模式的Activity，如果这个实例存在，不会重新创建，系统中永远只会有一个这样的实例）
+
+        -->
 
         <!--
             android:windowSoftInputMode 避免输入法面板遮挡输入框的问题,在 AndroidManifest.xml 中设置
