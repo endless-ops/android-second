@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.dreamchase.android.second">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Androidsecond"
+        android:name=".activity.MyApplication">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 显示启动 -->
+        <!-- 注册一个Activity -->
+        <activity android:name=".activity.SecondActivity"/>
+
+        <!-- 隐式启动 -->
+        <!-- 注册一个Activity -->
+        <activity android:name=".activity.ThreeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.dreamchase.android.second.activity.ThreeActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 显示启动 -->
+        <!-- 注册一个Activity -->
+        <activity android:name=".activity.FourActivity"/>
+        <activity android:name=".activity.ExplodeActivity"/>
+        <activity android:name=".activity.SlideActivity"/>
+        <activity android:name=".activity.FadeActivity"/>
+        <activity android:name=".activity.SharedElementActivity"/>
+        <activity android:name=".activity.AcceptActivity"/>
+        <activity android:name=".activity.AcceptChuanZhiHuiChuanZhiActivity"
+            android:windowSoftInputMode="adjustNothing"/>
+
+        <!--
+            android:windowSoftInputMode 避免输入法面板遮挡输入框的问题,在 AndroidManifest.xml 中设置
+            属性值:
+                stateUnspecified   软键盘的状态并没有指定，系统将选中一个合适的状态或依赖主题设置
+                stateUnchanged  当这个Activity出现时，软键盘将一直保持在上一个Activity中的状态，无论是显示还是隐藏
+                stateHidden    用户选择Activity时，软键盘总是被隐藏
+                stateAlwaysHidden  当该Activity主窗口获取焦点时，软键盘也总是被隐藏
+                stateVisible   软键盘通常是可见的
+                stateAlwaysVisible 用户选择 Activity 时，软键盘总是显示的状态
+                adjustUnspecified  默认设置，通常由系统自行决定是隐藏还是显示，软键盘不会自动弹出
+                adjustResize  该Activity总是调整屏幕的大小，以便流出软键盘的空间  会自动弹出软键盘
+                adjustPan  当前窗口的内容将自动移动，以便当前焦点从不被键盘覆盖和用户总是能够看到输入内容部分，软键盘不会自动弹出
+                adjustNothing 不会调整屏幕的大小 ，软键盘不会自动弹出
+
+        -->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<slide xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/decelerate_cubic"
+    android:slideEdge="end"
+    android:duration="1000" >
+
+    <targets>
+        <target android:excludeId="@android:id/statusBarBackground"/>
+    </targets>
+</slide>
+
+<!--
+    android:interpolator  属性设置插值器，就是用来控制滑动速度
+    android:slideEdge      有四个值，表示不同的方向滑动效果：end 表示右侧， start表示左侧 top表示顶部 bottom表示底部
+
+
+
+    android:excludeId   忽略的控件id，如果需要忽略多个view，则一直增加target
+ -->
