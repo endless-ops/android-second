@@ -6,21 +6,26 @@
     android:id="@+id/rl_root">
 
     <Button
-        android:id="@+id/btn_dynamic_broadcast_send_message"
+        android:id="@+id/btn_start_service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="给动态注册的广播发送消息"/>
+        android:text="start Service"/>
 
     <Button
-        android:id="@+id/btn_static_broadcast_send_message"
+        android:id="@+id/btn_stop_service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="给静态注册的广播发送消息"/>
+        android:text="stop Service"/>
 
     <Button
-        android:id="@+id/btn_local_broadcast_send_message"
+        android:id="@+id/btn_bind_service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="该应用内的广播发送消息"/>
+        android:text="bind Service"/>
 
+    <Button
+        android:id="@+id/btn_unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="unbind Service"/>
 </LinearLayout>

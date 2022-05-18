@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.dreamchase.android.second">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -79,6 +81,17 @@
                 adjustNothing 不会调整屏幕的大小 ，软键盘不会自动弹出
 
         -->
+
+        <!-- 注册一个Service -->
+        <service android:name=".service.LocalService"/>
+
+        <!-- 注册一个receiver -->
+        <receiver android:name=".broadcast.StaticBroadcast" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.STATIC_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+
 
     </application>
 
